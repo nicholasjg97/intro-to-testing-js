@@ -7,3 +7,7 @@ function sayHello(input) {
     return input === true || input === false ? 'Hello, World!' : "Hello, " + input + "!";
 
 }
+
+function isFive(input) {
+    return input == 5;
+}
