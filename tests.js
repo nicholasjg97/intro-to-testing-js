@@ -135,9 +135,6 @@ describe('add', function () {
     it("should be a define function", function () {
         expect(typeof add).toBe('function');
     })
-    it('should return sum of two numbers as long as each input is a number or a string containing a number', function () {
-        expect(add()).toBe();
-    });
     it('should return 5 for sum of 2 and 3', function () {
         expect(add(2, 3)).toBe(5);
     });
@@ -148,15 +145,15 @@ describe('add', function () {
         expect(add("5", 6)).toBe(11);
     });
     it('should return 6 for sum of "-4" and "10"', function () {
-        expect(add("-4", 10)).toBe(6);
+        expect(add("-4", "10")).toBe(6);
     });
     it('should return NaN for "banana" and "split"', function () {
-        expect(add("banana", "split")).toBe(NaN);
+        expect(add("banana", "split")).toBeNaN();
     });
     it('should return NaN for 2 and "apples"', function () {
-        expect(add(2, "apples")).toBe(NaN);
+        expect(add(2, "apples")).toBeNaN();
     });
-    it('should return NaN when there is no entered argument', function () {
-        expect(add()).toBe(NaN);
+    it('should return NaN when there is no argument', function () {
+        expect(add()).toBeNaN();
     });
 })
