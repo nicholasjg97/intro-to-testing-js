@@ -135,9 +135,9 @@ describe('add', function () {
     it("should be a define function", function () {
         expect(typeof add).toBe('function');
     })
-    // it('should return sum of two numbers as long as each input is a number or a string containing a number', function () {
-    //     expect(add()).toBe;
-    // });
+    it('should return sum of two numbers as long as each input is a number or a string containing a number', function () {
+        expect(add()).toBe();
+    });
     it('should return 5 for sum of 2 and 3', function () {
         expect(add(2, 3)).toBe(5);
     });
